@@ -14,41 +14,37 @@
 
     <div class="login-box">
         <h2>Register Here</h2>
-        <form method="POST">
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+            <p>{{$error}}</p>
+            @endforeach
+        </div>
+        @endif
+        <form method="POST" action="{{route('Register')}}">
             <div class="user-box">
-                <input type="text" name="username" :value="old('username')" autocomplete="username">
-                <label value="{{ __('Username') }}">Username</label>
+                <input type="text" name="username" autocomplete="username" id="username">
+                <label for="username">Username</label>
             </div>
             <div class="user-box">
-                <input type="email" name="email" :value="old('email')">
-                <label value="{{ __('Email') }}">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="email">Email</label>
             </div>
             <div class="user-box">
-                <input type="password" name="password" required autocomplete="new-password">
-                <label value="{{ __('Password') }}">Password</label>
+                <input type="password" name="password" required autocomplete="new-password" id="password">
+                <label for="password">Password</label>
             </div>
-            <div style="flex-direction:row">
-                <div>
-                    <a href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Register
-                    </a>
+            <button type="submit">
 
-                </div>
-
-                <div class="flex items-center justify-end mt-4">
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="#">
-                        {{ __('Already registered?') }}
-                    </a>
-
-                    <x-jet-button class="ml-4">
-                        {{ __('Register') }}
-                    </x-jet-button>
-                </div>
-            </div>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Register
+                </a>
+            </button>
+            {{csrf_field() }}
         </form>
     </div>
 </body>

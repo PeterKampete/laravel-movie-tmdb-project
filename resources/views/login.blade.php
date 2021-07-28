@@ -14,22 +14,34 @@
 
     <div class="login-box">
         <h2>Login</h2>
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+            <p>{{$error}}</p>
+            @endforeach
+        </div>
+        @endif
         <form method="POST">
             <div class=" user-box">
-                <input type="text" name="" required="">
+                <input type="email" name="email" id="email">
                 <label>Email</label>
             </div>
             <div class="user-box">
-                <input type="password" name="" required="">
-                <label>Password</label>
+                <type="password" name="password" required autocomplete="new-password" id="password">
+                    <label>Password</label>
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Login
-            </a>
+            <button>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Login
+                </a>
+
+            </button>
+            {{csrf_field() }}
+
         </form>
     </div>
 </body>
