@@ -34,18 +34,30 @@
                 <input type="password" name="password" required autocomplete="new-password" id="password">
                 <label for="password">Password</label>
             </div>
-            <button type="submit">
+            <div style="display:flex; flex-direction:row; justify-content: space-between">
+                <div>
+                    <button type="submit">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Register
+                    </button>
+                </div>
 
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Register
-                </a>
-            </button>
+            </div>
             {{csrf_field() }}
         </form>
+        <div style="margin-top:5px">
+            <h4 style="color:white">Have an account ?</h4>
+            <a href=" {{route('LoginPage')}}">
+                <button
+                    style="height:30px;text-transform: none;padding:5px;width: 80px;color:#0A043C;font-size:15px;font-weight:bold">
+                    Login
+                </button>
+
+            </a>
+        </div>
     </div>
 </body>
 

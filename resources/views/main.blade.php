@@ -18,18 +18,13 @@
 </head>
 
 <body>
-    <div>
-        <x-header-navigation />
-        <div class="container">
-            @foreach($topRatedMovies as $movie)
-            @if($loop -> index
-            < 2) <x-movie-card :movie="$movie" :genres="$genres" />
-            @endif
-            @endforeach
+    <x-header-navigation />
+    @foreach($topRatedMovies as $movie)
+    @if($loop -> index
+    < 2) <x-movie-card :movie="$movie" :genres="$genres" />
 
-        </div>
-    </div>
-
+    @endif
+    @endforeach
 
 </body>
 

@@ -28,7 +28,7 @@ class MovieCategoriesController extends Controller
 
  public function show($id)
     {
-        $movie = Http::withToken(config('services.tmdb.token'))->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')->json()['genres'];
+        $movie = Http::withToken(config('services.tmdb.token'))->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')->json();
 
         return view('Categories\latestmovies', [
             'movie' => $movie,
