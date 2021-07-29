@@ -21,28 +21,21 @@
             @endforeach
         </div>
         @endif
-        <form method="POST">
+        <form method="POST" action="{{route('Login')}}>
             <div class=" user-box">
-                <input type="email" name="email" id="email">
-                <label>Email</label>
-            </div>
-            <div class="user-box">
-                <type="password" name="password" required autocomplete="new-password" id="password">
-                    <label>Password</label>
-            </div>
-            <button>
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Login
-                </a>
+            <input type="email" name="email" id="email">
+            <label>Email</label>
+    </div>
+    <div class="user-box">
+        <type="password" name="password" required autocomplete="new-password" id="password">
+            <label>Password</label>
+    </div>
+    <button>
+        Login
+    </button>
+    {{csrf_field() }}
 
-            </button>
-            {{csrf_field() }}
-
-        </form>
+    </form>
     </div>
 </body>
 

@@ -21,11 +21,22 @@
     <div>
         <x-header-navigation />
         <div class="container">
-            @foreach($topRatedMovies as $movie)
+            @foreach($upcomingMovies as $movie)
             @if($loop -> index
-            < 2) <x-movie-card :movie="$movie" :genres="$genres" />
+            < 2) <x-movie-card :movie="$movie" :genres=$genres />
             @endif
             @endforeach
+
+            <!-- <h1>
+                NOW PLAYING
+            </h1>
+    
+            @foreach($nowPlayingMovies as $movie)
+            @if($loop -> index
+            < 2) <x-movie-card :movie="$movie" :genres=$genres />
+            @endif
+    
+            @endforeach -->
 
         </div>
     </div>

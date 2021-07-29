@@ -46,4 +46,10 @@ if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->i
 }
 return redirect()->back();
     }
+
+    public function getLogout(){
+        Auth::logout();
+        return redirect()->back();
+
+    }
 }
