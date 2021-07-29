@@ -8,7 +8,6 @@
         </div>
         <div class="card-content">
             <div class="">
-
                 <a href="{{route('movies.movieDetails', $movie['id'])}}">
                     <h5 class="">{{$movie['title']}}</h5>
                 </a>

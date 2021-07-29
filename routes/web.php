@@ -27,4 +27,4 @@ Route::get('/logout', [UserController::class, 'getLogout'])->name('Logout');
 Route::get('/latestmovies', [MovieCategoriesController::class, 'getLatestmovies'])->name('latestmovies');
 Route::get('/popularmovies', [MovieCategoriesController::class, 'getPopularmovies'])->name('popularmovies');
 Route::get('/upcomingmovies', [MovieCategoriesController::class, 'getUpcomingmovies'])->name('upcomingmovies');
-Route::get('/movies/{movie}', [MovieCategoriesController::class, 'show'])->name('movies.CategoryDetails');
+Route::get('CategoryDetails/movies/{movie}', [MovieCategoriesController::class, 'show'])->name('movies.CategoryDetails');

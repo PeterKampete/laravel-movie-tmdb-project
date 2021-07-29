@@ -19,10 +19,10 @@
 
 <body>
     <div>
+        <x-header-navigation />
         <div class="container">
             @foreach($latestMovies as $movie)
-            @if($loop -> index
-            < 2) <div class="movie-card">
+            @if($loop -> index < 2) <div class="movie-card">
                 <div class="image">
                     <img src="{{'https://image.tmdb.org/t/p/w185/'.$movie['poster_path']}}" />
 

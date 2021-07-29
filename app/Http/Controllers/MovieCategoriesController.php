@@ -30,7 +30,7 @@ class MovieCategoriesController extends Controller
     {
         $movie = Http::withToken(config('services.tmdb.token'))->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')->json()['genres'];
 
-        return view('Categories/latestmovies', [
+        return view('Categories\latestmovies', [
             'movie' => $movie,
             //  'latestMovies' => $latestMovies,
             // 'popularMovies' => $popularMovies,
