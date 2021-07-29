@@ -1,7 +1,10 @@
 <div class="navbar">
+    @if(Auth::check())
     <a href="{{route('Logout')}}">Logout</a>
+    @else
     <a href=" {{route('RegisterPage')}}">Register</a>
     <a href=" {{route('LoginPage')}}">Login</a>
+    @endif
     <div class="dropdown">
         <button class="dropbtn">CATEGORIES
             <i class="fa fa-caret-down"></i>

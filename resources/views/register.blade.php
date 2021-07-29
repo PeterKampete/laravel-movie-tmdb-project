@@ -11,8 +11,8 @@
 </head>
 
 <body>
-
-    <div class="login-box">
+    <x-header-navigation />
+    <div class="login-box login-box-add">
         <h2>Register Here</h2>
         @if(count($errors) > 0)
         <div class="alert alert-danger">

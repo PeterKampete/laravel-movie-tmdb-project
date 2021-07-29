@@ -11,9 +11,10 @@
 </head>
 
 <body>
+    <x-header-navigation />
 
     <div class="login-box">
-        <h2>Register Here</h2>
+        <h2>Login Here</h2>
         @if(count($errors) > 0)
         <div class="alert alert-danger">
             @foreach($errors->all() as $error)

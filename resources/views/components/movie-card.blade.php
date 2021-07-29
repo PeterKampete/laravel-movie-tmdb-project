@@ -3,7 +3,7 @@
                <img src="{{'https://image.tmdb.org/t/p/w185/'.$movie['poster_path']}}" class="image" />
 
                <a href="{{route('movies.movieDetails', $movie['id'])}}" class="play-icon">
-                   <i class="fa fa-play" aria-hidden="true"></i>
+                   <i class="fa fa-play fa-lg" aria-hidden="true"></i>
                </a>
 
                <div class="card-content">
